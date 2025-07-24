@@ -1,0 +1,183 @@
+$primary: #2563eb;
+$primary-light: #e0eaff;
+$primary-dark: #1741a6;
+$bg: #f6f8fa;
+$card-bg: #fff;
+$card-shadow: 0 2px 8px #2563eb22;
+$border: #e5e7eb;
+$text: #222;
+$text-light: #6b7280;
+$header-bg: #f1f5fb;
+$header-border: #d1d5db;
+$highlight: #fef9c3;
+
+.custom-calendar {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: $bg;
+  padding: 0.5rem 0.5rem; // Reduced padding
+  border-radius: 18px;
+  box-shadow: 0 4px 24px #2563eb11;
+  max-width: 1600px; // Increased max width for a larger calendar
+  width: 100%;
+  margin: 0 auto;
+  .calendar-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    background: $header-bg;
+    border-radius: 12px;
+    padding: 0.5rem 1rem; // Reduced header padding
+    border: 1px solid $header-border;
+    box-shadow: 0 1px 4px #2563eb08;
+    .calendar-title {
+      font-size: 1.3rem;
+      font-weight: 700;
+      flex: 1;
+      text-align: center;
+      color: $primary-dark;
+      letter-spacing: 0.5px;
+    }
+    button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: $card-bg;
+      border: 2px solid $primary-light;
+      border-radius: 50%;
+      width: 44px;
+      height: 44px;
+      font-size: 1.7rem;
+      color: $primary;
+      cursor: pointer;
+      box-shadow: 0 2px 8px #2563eb11;
+      transition: background 0.2s, color 0.2s, box-shadow 0.2s, border 0.2s;
+      outline: none;
+      margin: 0 0.2rem;
+      &:hover, &:focus {
+        background: $primary;
+        color: #fff;
+        border: 2px solid $primary;
+        box-shadow: 0 4px 16px #2563eb33;
+      }
+    }
+    .calendar-search {
+      padding: 0.4rem 1rem;
+      border-radius: 8px;
+      border: 1px solid $border;
+      min-width: 160px;
+      font-size: 1rem;
+      background: #fff;
+      color: $text;
+      transition: border 0.2s;
+      &:focus {
+        border: 1.5px solid $primary;
+        outline: none;
+      }
+    }
+    select {
+      padding: 0.4rem 1rem;
+      border-radius: 8px;
+      border: 1px solid $border;
+      min-width: 130px;
+      font-size: 1rem;
+      background: #fff;
+      color: $text;
+      transition: border 0.2s;
+      &:focus {
+        border: 1.5px solid $primary;
+        outline: none;
+      }
+    }
+  }
+  .calendar-week-view {
+    display: flex;
+    gap: 1.5rem; // Slightly larger gap for bigger calendar
+    overflow-x: auto;
+    min-width: 1200px; // Increased min width for a larger calendar
+    .calendar-day-column {
+      background: $card-bg;
+      border-radius: 14px;
+      min-width: 320px; // Increased for larger days
+      max-width: 400px; // Increased max width
+      flex: 1 1 0;
+      display: flex;
+      flex-direction: column;
+      box-shadow: $card-shadow;
+      border: 1.5px solid $border;
+      transition: box-shadow 0.2s, border 0.2s;
+      &:hover {
+        box-shadow: 0 4px 16px #2563eb33;
+        border: 1.5px solid $primary-light;
+      }
+      .calendar-day-header {
+        background: $primary-light;
+        border-radius: 14px 14px 0 0;
+        padding: 1rem 0.5rem;
+        font-weight: 700;
+        text-align: center;
+        font-size: 1.08rem;
+        color: $primary-dark;
+        border-bottom: 1.5px solid $border;
+        margin-bottom: 0.5rem;
+        letter-spacing: 0.2px;
+      }
+      .calendar-day-cards {
+        flex: 1;
+        overflow-y: auto;
+        max-height: 60vh;
+        padding: 0.7rem 0.5rem 1rem 0.5rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.8rem;
+      }
+      .calendar-card {
+        background: $card-bg;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px #2563eb11;
+        border: 1px solid $border;
+        padding: 0.9rem 0.7rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.3rem;
+        transition: box-shadow 0.2s, border 0.2s, background 0.2s;
+        &:hover {
+          background: $highlight;
+          box-shadow: 0 4px 16px #2563eb22;
+          border: 1.5px solid $primary;
+        }
+        .calendar-card-type {
+          font-size: 1rem;
+          font-weight: 700;
+          color: $primary;
+          margin-bottom: 0.2rem;
+          letter-spacing: 0.2px;
+        }
+        .calendar-card-field {
+          font-size: 0.97rem;
+          color: $text-light;
+          b {
+            color: $text;
+            font-weight: 600;
+          }
+        }
+      }
+    }
+  }
+}
+
+.calendar-date-picker {
+  padding: 0.4rem 1rem;
+  border-radius: 8px;
+  border: 1px solid $border;
+  min-width: 160px;
+  font-size: 1rem;
+  background: #fff;
+  color: $text;
+  transition: border 0.2s;
+  margin: 0 0.5rem;
+  &:focus {
+    border: 1.5px solid $primary;
+    outline: none;
+  }
+} 
