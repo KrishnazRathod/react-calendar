@@ -1,5 +1,6 @@
 
 import React, { useState } from 'react';
+import LivePlayground from '../../components/LivePlayground';
 
 const Accessibility = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -65,6 +66,29 @@ const Accessibility = () => {
                         This content is conditionally visible. The screen reader knows it is expanded.
                     </div>
                 )}
+            </section>
+
+            <section className="example-section">
+                <h3>🧪 ARIA Playground</h3>
+                <p>Experiment with different roles and aria attributes here.</p>
+                <LivePlayground
+                    initialCode={`
+<style>
+  .alert { padding: 10px; border-radius: 4px; border: 1px solid transparent; }
+  .alert-danger { color: #842029; background-color: #f8d7da; border-color: #f5c6cb; }
+</style>
+
+<!-- Try adding aria-live="polite" to see how screen readers behave (conceptually) -->
+<div role="alert" class="alert alert-danger">
+  <strong>Error!</strong> A simple danger alert—check it out!
+</div>
+
+<div style="margin-top: 20px;">
+  <label for="email">Email Address (with explicit label):</label>
+  <input type="email" id="email" />
+</div>
+                    `}
+                />
             </section>
         </div>
     );

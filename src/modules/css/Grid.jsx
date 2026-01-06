@@ -1,5 +1,6 @@
 
 import React, { useState } from 'react';
+import LivePlayground from '../../components/LivePlayground';
 
 const Grid = () => {
     const [columns, setColumns] = useState('repeat(3, 1fr)');
@@ -108,7 +109,46 @@ const Grid = () => {
 }`}
                 </pre>
             </section>
-        </div>
+
+            <section className="example-section">
+                <h3>🔳 Free Grid Sandbox</h3>
+                <p>Experiment with <code>grid-template-areas</code> or complex tracks here.</p>
+                <LivePlayground
+                    initialCode={`
+<style>
+  .grid-box { 
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 100px 100px;
+    gap: 10px;
+    background: #1e293b;
+    padding: 10px;
+  }
+  .item {
+    background: #10b981;
+    display: grid;
+    place-items: center;
+    font-weight: bold;
+    color: #064e3b;
+    border-radius: 4px;
+  }
+  .item:first-child {
+    grid-column: span 2;
+    background: #34d399;
+  }
+</style>
+
+<div class="grid-box">
+  <div class="item">Span 2</div>
+  <div class="item">2</div>
+  <div class="item">3</div>
+  <div class="item">4</div>
+  <div class="item">5</div>
+</div>
+                    `}
+                />
+            </section>
+        </div >
     );
 };
 
