@@ -1,5 +1,5 @@
-
 import React from 'react';
+import LivePlayground from '../../components/LivePlayground';
 
 const HtmlSemantics = () => {
     return (
@@ -69,6 +69,37 @@ const HtmlSemantics = () => {
             <section className="challenge-section">
                 <h3>🎯 Micro Challenge</h3>
                 <p>Inspect this page! Look at the sidebar and the main content. We are using <code>&lt;aside&gt;</code> and <code>&lt;main&gt;</code> tags right now. Open DevTools (F12) to verify.</p>
+
+                <div style={{ marginTop: '2rem' }}>
+                    <h4>Try it yourself!</h4>
+                    <p style={{ marginBottom: '1rem', fontSize: '0.9rem', color: '#94a3b8' }}>
+                        Write some semantic HTML below. Try adding a <code>&lt;nav&gt;</code> inside a <code>&lt;header&gt;</code>.
+                    </p>
+                    <LivePlayground
+                        initialCode={`
+<style>
+  header { background: #3b82f6; color: white; padding: 10px; }
+  nav a { color: white; margin-right: 10px; text-decoration: none; }
+  main { padding: 10px; background: #f8fafc; color: #334155; }
+</style>
+
+<header>
+  <h1>My Website</h1>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+  </nav>
+</header>
+
+<main>
+  <article>
+    <h2>Article Title</h2>
+    <p>This is some semantic content.</p>
+  </article>
+</main>
+            `}
+                    />
+                </div>
             </section>
         </div>
     );

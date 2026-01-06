@@ -1,5 +1,6 @@
 
 import React, { useState } from 'react';
+import LivePlayground from '../../components/LivePlayground';
 
 const Flexbox = () => {
     const [direction, setDirection] = useState('row');
@@ -100,6 +101,37 @@ const Flexbox = () => {
 }`}
                 </pre>
             </div>
+
+            <section className="example-section">
+                <h3>🎨 Free Flexbox Sandbox</h3>
+                <p>Want to go beyond the controls? Write raw CSS here.</p>
+                <LivePlayground
+                    initialCode={`
+<style>
+  .flex-container {
+    display: flex;
+    gap: 10px;
+    background: #1e293b;
+    padding: 20px;
+    height: 200px;
+  }
+  .box {
+    background: #646cff;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    font-weight: bold;
+  }
+</style>
+
+<div class="flex-container">
+  <div class="box">1</div>
+  <div class="box">2</div>
+  <div class="box" style="flex-grow: 1; background: #ec4899;">3 (Grow)</div>
+</div>
+                    `}
+                />
+            </section>
         </div>
     );
 };

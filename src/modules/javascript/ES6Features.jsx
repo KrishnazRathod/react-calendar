@@ -1,5 +1,6 @@
 
 import React, { useState } from 'react';
+import JsPlayground from '../../components/JsPlayground';
 
 const ES6Features = () => {
     const [data, setData] = useState(null);
@@ -141,6 +142,30 @@ const handleLogin = async () => {
                         </pre>
                     </div>
                 )}
+
+                <div style={{ marginTop: '2rem' }}>
+                    <p><strong>Test your solution here:</strong></p>
+                    <JsPlayground
+                        title="Challenge Playground"
+                        initialCode={`// 1. Refactor this to return a Promise
+const loginUser = (username) => {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve({ user: username, token: "123" });
+    }, 1000);
+  });
+};
+
+// 2. Use async/await here
+const handleLogin = async () => {
+  console.log("Logging in...");
+  const response = await loginUser("Alex");
+  console.log("Logged in:", response);
+};
+
+handleLogin();`}
+                    />
+                </div>
 
             </section>
         </div>
