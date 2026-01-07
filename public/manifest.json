@@ -1,0 +1,56 @@
+{
+    "name": "Frontend Master - Learning Dashboard",
+    "short_name": "Frontend Master",
+    "description": "Comprehensive frontend development learning platform with interactive playgrounds",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#14b8a6",
+    "orientation": "portrait-primary",
+    "scope": "/",
+    "icons": [
+        {
+            "src": "/icon-192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "/icon-512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any maskable"
+        }
+    ],
+    "categories": [
+        "education",
+        "developer"
+    ],
+    "screenshots": [],
+    "shortcuts": [
+        {
+            "name": "React Fundamentals",
+            "short_name": "React",
+            "description": "Learn React basics",
+            "url": "/react/fundamentals",
+            "icons": [
+                {
+                    "src": "/icon-192.png",
+                    "sizes": "192x192"
+                }
+            ]
+        },
+        {
+            "name": "JavaScript",
+            "short_name": "JS",
+            "description": "JavaScript deep dive",
+            "url": "/javascript/es6",
+            "icons": [
+                {
+                    "src": "/icon-192.png",
+                    "sizes": "192x192"
+                }
+            ]
+        }
+    ]
+}
