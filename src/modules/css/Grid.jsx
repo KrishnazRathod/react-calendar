@@ -93,10 +93,10 @@ const Grid = () => {
                     gridTemplateRows: '60px 200px 50px',
                     gap: '5px'
                 }}>
-                    <div style={{ gridArea: 'header', background: '#3b82f6', padding: '10px' }}>Header</div>
-                    <div style={{ gridArea: 'sidebar', background: '#6366f1', padding: '10px' }}>Sidebar</div>
-                    <div style={{ gridArea: 'main', background: '#8b5cf6', padding: '10px' }}>Main Content</div>
-                    <div style={{ gridArea: 'footer', background: '#a855f7', padding: '10px' }}>Footer</div>
+                    <div style={{ gridArea: 'header', background: '#8b5cf6', padding: '10px' }}>Header</div>
+                    <div style={{ gridArea: 'sidebar', background: '#7c3aed', padding: '10px' }}>Sidebar</div>
+                    <div style={{ gridArea: 'main', background: '#a78bfa', padding: '10px' }}>Main Content</div>
+                    <div style={{ gridArea: 'footer', background: '#6d28d9', padding: '10px' }}>Footer</div>
                 </div>
                 <pre style={{ marginTop: '1rem', background: '#0f172a', padding: '1rem', borderRadius: '6px' }}>
                     {`.layout {

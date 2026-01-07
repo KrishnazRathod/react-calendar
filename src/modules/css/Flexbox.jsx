@@ -16,13 +16,13 @@ const Flexbox = () => {
         flexWrap: wrap,
         height: '300px',
         background: '#1e293b',
-        border: '1px dashed #646cff',
+        border: '1px dashed #8b5cf6',
         padding: '1rem',
         gap: '10px'
     };
 
     const itemStyle = {
-        background: '#646cff',
+        background: '#8b5cf6',
         color: 'white',
         padding: '1.5rem',
         borderRadius: '8px',
@@ -116,7 +116,7 @@ const Flexbox = () => {
     height: 200px;
   }
   .box {
-    background: #646cff;
+    background: #8b5cf6;
     color: white;
     padding: 20px;
     border-radius: 8px;

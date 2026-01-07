@@ -1,82 +1,157 @@
 .live-playground {
-    border: 1px solid #334155;
-    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
     overflow: hidden;
-    margin-top: 1.5rem;
-    background: #0f172a;
+    margin-top: var(--spacing-xl);
+    background: var(--bg-card);
     display: flex;
     flex-direction: column;
+    box-shadow: var(--shadow-md);
+    transition: all var(--transition-base);
+    width: 100%;
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+.live-playground:hover {
+    box-shadow: var(--shadow-lg);
 }
 
 .playground-header {
-    padding: 0.75rem 1rem;
-    background: #1e293b;
-    border-bottom: 1px solid #334155;
+    padding: var(--spacing-md) var(--spacing-lg);
+    background: var(--bg-secondary);
+    border-bottom: 1px solid var(--border-color);
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .playground-header h4 {
     margin: 0;
-    font-size: 0.9rem;
-    color: #e2e8f0;
+    font-size: 1rem;
+    color: var(--text-primary);
+    font-weight: 600;
 }
 
 .playground-header .badge {
     font-size: 0.75rem;
-    background: #646cff;
-    color: white;
-    padding: 0.2rem 0.6rem;
-    border-radius: 12px;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+    color: var(--text-inverse);
+    padding: 0.25rem var(--spacing-md);
+    border-radius: var(--radius-md);
+    font-weight: 500;
+    box-shadow: var(--shadow-sm);
 }
 
 .playground-body {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    height: 300px;
+    height: 400px;
+    min-height: 300px;
+}
+
+@media (max-width: 768px) {
+    .playground-body {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        height: 600px;
+    }
+}
+
+@media (max-width: 480px) {
+    .playground-body {
+        height: 500px;
+    }
+}
+
+.editor-pane {
+    border-right: 1px solid var(--border-color);
+}
+
+@media (max-width: 768px) {
+    .editor-pane {
+        border-right: none;
+        border-bottom: 1px solid var(--border-color);
+    }
 }
 
 .editor-pane textarea {
     width: 100%;
     height: 100%;
-    background: #0f172a;
-    color: #a5b3ce;
+    background: var(--bg-primary);
+    color: var(--text-primary);
     border: none;
-    padding: 1rem;
-    font-family: 'Fira Code', monospace;
-    font-size: 0.9rem;
+    padding: var(--spacing-lg);
+    font-family: 'Fira Code', 'Consolas', 'Monaco', monospace;
+    font-size: 0.875rem;
     resize: none;
-    border-right: 1px solid #334155;
     outline: none;
+    line-height: 1.6;
+    transition: background-color var(--transition-base);
 }
 
 .editor-pane textarea:focus {
-    background: #152033;
+    background: var(--bg-secondary);
+}
+
+.editor-pane textarea::placeholder {
+    color: var(--text-tertiary);
 }
 
 .preview-pane {
     background: white;
     overflow: hidden;
+    position: relative;
+}
+
+[data-theme="dark"] .preview-pane {
+    background: #f8fafc;
+}
+
+.preview-pane iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    background: white;
 }
 
 .playground-footer {
-    padding: 0.5rem 1rem;
-    border-top: 1px solid #334155;
+    padding: var(--spacing-md) var(--spacing-lg);
+    border-top: 1px solid var(--border-color);
     text-align: right;
-    background: #1e293b;
+    background: var(--bg-secondary);
+    display: flex;
+    justify-content: flex-end;
+    gap: var(--spacing-sm);
+}
+
+@media (max-width: 480px) {
+    .playground-footer {
+        padding: var(--spacing-sm) var(--spacing-md);
+        flex-direction: column;
+    }
 }
 
 .playground-footer button {
     background: transparent;
-    border: 1px solid #475569;
-    color: #94a3b8;
-    padding: 0.3rem 0.8rem;
-    font-size: 0.8rem;
+    border: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    padding: var(--spacing-sm) var(--spacing-lg);
+    font-size: 0.875rem;
+    transition: all var(--transition-base);
 }
 
 .playground-footer button:hover {
-    border-color: #646cff;
-    color: #646cff;
-    background: rgba(100, 108, 255, 0.1);
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+    background: rgba(139, 92, 246, 0.1);
+    transform: translateY(-1px);
+}
+
+.playground-footer button:active {
+    transform: translateY(0);
 }
