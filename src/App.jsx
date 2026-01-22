@@ -10,6 +10,7 @@ import { UIUXRoutes } from './modules/ui-ux/routes';
 import { PerformanceRoutes } from './modules/performance/routes';
 import { APIRoutes } from './modules/api/routes';
 import { AdvancedRoutes } from './modules/advanced/routes';
+import { InterviewRoutes } from './modules/interview/routes';
 import InstallButton from './components/InstallButton';
 import './App.css';
 
@@ -28,6 +29,7 @@ function App() {
           <Route path="performance/*" element={<PerformanceRoutes />} />
           <Route path="api/*" element={<APIRoutes />} />
           <Route path="advanced/*" element={<AdvancedRoutes />} />
+          <Route path="interview/*" element={<InterviewRoutes />} />
         </Route>
       </Routes>
       <InstallButton />
