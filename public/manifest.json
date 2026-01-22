@@ -1,6 +1,6 @@
 {
-    "name": "Frontend Master - Learning Dashboard",
-    "short_name": "Frontend Master",
+    "name": "Interview Master - Learning Dashboard",
+    "short_name": "Interview Master",
     "description": "Comprehensive frontend development learning platform with interactive playgrounds",
     "start_url": "/",
     "display": "standalone",

@@ -1,4 +1,4 @@
-// Service Worker for Frontend Master PWA
+// Service Worker for Interview Master PWA
 const CACHE_NAME = 'frontend-master-v1';
 const urlsToCache = [
     '/',
