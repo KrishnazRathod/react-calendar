@@ -149,13 +149,6 @@ const MainLayout = () => {
                 Map, Filter & Reduce
               </NavLink>
               <NavLink
-                to="/javascript/promise-race-vs-any"
-                className={({ isActive }) => isActive ? 'nav-item active' : 'nav-item'}
-                onClick={handleNavClick}
-              >
-                Promise.race vs .any
-              </NavLink>
-              <NavLink
                 to="/javascript/slice-vs-splice"
                 className={({ isActive }) => isActive ? 'nav-item active' : 'nav-item'}
                 onClick={handleNavClick}
