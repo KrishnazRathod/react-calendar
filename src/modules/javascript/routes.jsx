@@ -11,9 +11,7 @@ import Closures from './Closures';
 import CallBindApply from './CallBindApply';
 import Promises from './Promises';
 import AsyncAwait from './AsyncAwait';
-import MapFilterReduce from './MapFilterReduce';
-import PromiseRaceVsAny from './PromiseRaceVsAny';
-import SliceVsSplice from './SliceVsSplice';
+import MapFilterReduce from './MapFilterReduce'; import SliceVsSplice from './SliceVsSplice';
 import LoopComparison from './LoopComparison';
 import RestVsSpread from './RestVsSpread';
 import ThisKeyword from './ThisKeyword';
@@ -39,7 +37,6 @@ export const JavaScriptRoutes = () => {
             <Route path="promises" element={<Promises />} />
             <Route path="async-await" element={<AsyncAwait />} />
             <Route path="map-filter-reduce" element={<MapFilterReduce />} />
-            <Route path="promise-race-vs-any" element={<PromiseRaceVsAny />} />
             <Route path="slice-vs-splice" element={<SliceVsSplice />} />
             <Route path="loop-comparison" element={<LoopComparison />} />
             <Route path="rest-vs-spread" element={<RestVsSpread />} />

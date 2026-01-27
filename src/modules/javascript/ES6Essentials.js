@@ -113,3 +113,47 @@ numbers[0] = 10; // ✅ Allowed - modifying array element
 // - const: ❌ Redeclare ❌ Reassign (but can modify object/array contents)
 
 
+// The call() method invokes a function immediately. It takes the this context as the first argument, followed by arguments for the function individually (separated by commas)
+function introduce(city, country) {
+    console.log(`Hi, I'm ${this.name} from ${city}, ${country}.`);
+}
+const user1 = { name: "Krishna" };
+introduce.call(user1, "Indore", "India"); // Hi, I'm Krishna from Indore, India.
+
+// The apply() method invokes a function immediately. It takes the this context as the first argument, followed by an array of arguments for the function.
+function introduce(city, country) {
+    console.log(`Hi, I'm ${this.name} from ${city}, ${country}.`);
+}
+const user2 = { name: "Rajesh" };
+introduce.apply(user2, ["Mumbai", "India"]);
+
+//why we need apply method?
+
+// because we can pass arguments as an array.
+const numbers = [1, 2, 3, 4, 5];
+const max = Math.max.apply(null, numbers);
+console.log(max); // 5
+
+// because we can pass arguments as a comma separated values.
+const numbers2 = [1, 2, 3, 4, 5];
+const max2 = Math.max.apply(null, numbers2);
+console.log(max2); // 5
+
+//we can directly pass an array and max method to get the result ?
+const numbers3 = [1, 2, 3, 4, 5];
+const max3 = Math.max(...numbers3);
+console.log(max3); // 5
+
+
+
+// The bind() method returns a new function with the this context permanently bound to it.
+
+function introduce(city, country) {
+    console.log(`Hi, I'm ${this.name} from ${city}, ${country}.`);
+}
+const user3 = { name: "Rajesh" };
+const introduceUser = introduce.bind(user3, "Mumbai", "India");
+introduceUser(); // Hi, I'm Rajesh from Mumbai, India.
+
+
+
